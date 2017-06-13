@@ -81,6 +81,8 @@ You are actually able to explore and manipulate the data *inside* the method in 
 Now, in the terminal, in your pry console, type the variable name `this_variable_hasnt_been_interpreted_yet`. You should see a return value of `nil`. That's because the binding you placed on line 7 actually froze the program on line 7 and the variable you just called hasn't been interpreted yet. Consequently, our REPL doesn't know about it. 
 Now, in the terminal, type `exit`, and you'll leave your pry console and the program will continue to execute. 
 
+Test
+
 ## Instructions Part II: Using Pry to Debug
 
 You can imagine how helpful it will be to use Pry to freeze programs and to "pry" methods open in order to solve tests and debug your code. Let's walk through an example together. In this repository that you've forked and cloned down onto your computer, you'll see a `spec` folder containing a file `pry_debugging_spec.rb`. This is a test for the file `lib/pry_debugging.rb`. 
