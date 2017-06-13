@@ -125,14 +125,8 @@ How can we fix this method so that it behaves in the expected way? This method i
 
 Once you have your test passing, make sure the `binding.pry` line has been removed and add commit and push your changes. Then open a pull request. 
 
-```
-#hello world
-```
-
 ## Resources 
 
 * [Pry documentation](http://pryrepl.org/)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/debugging-with-pry' title='Debugging with Pry'>Debugging with Pry</a> on Learn.co and start learning to code for free.</p>
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/debugging-with-pry'>Debugging with Pry</a> on Learn.co and start learning to code for free.</p>
