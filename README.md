@@ -22,7 +22,13 @@ Pry is another Ruby REPL with some added functionality. When you enter IRB, you 
 
 Pry is far more flexible than IRB. Once you install the Pry library (via the Pry gem—we'll walk through installation in a bit), you can use the following line `binding.pry` anywhere in your code. 
 
-That line will get interpreted at runtime (as your program is executed). When the interpreter hits that line, your program will actually *freeze* and your terminal will turn into a REPL that exists right in the middle of your program, wherever you added the `binding.pry` line. 
+## Wait... What's 'binding'? 
+
+Binding is a built-in ruby class whose objects can encapsulate the context of your current scope (variables, methods etc.), and retain them for use outside of that context. 
+
+Calling `binding.pry` is essentially 'prying' into the current binding or context of the code, from outside your file.
+
+So when you place the line `binding.pry` in your code, that line will get interpreted at runtime (as your program is executed). When the interpreter hits that line, your program will actually *freeze* and your terminal will turn into a REPL that exists right in the middle of your program, wherever you added the `binding.pry` line. 
 
 Let's take a look. In this repository, you'll see a file called `pry_is_awesome.rb`. 
 
@@ -75,6 +81,8 @@ You are actually able to explore and manipulate the data *inside* the method in 
 Now, in the terminal, in your pry console, type the variable name `this_variable_hasnt_been_interpreted_yet`. You should see a return value of `nil`. That's because the binding you placed on line 7 actually froze the program on line 7 and the variable you just called hasn't been interpreted yet. Consequently, our REPL doesn't know about it. 
 Now, in the terminal, type `exit`, and you'll leave your pry console and the program will continue to execute. 
 
+Test
+
 ## Instructions Part II: Using Pry to Debug
 
 You can imagine how helpful it will be to use Pry to freeze programs and to "pry" methods open in order to solve tests and debug your code. Let's walk through an example together. In this repository that you've forked and cloned down onto your computer, you'll see a `spec` folder containing a file `pry_debugging_spec.rb`. This is a test for the file `lib/pry_debugging.rb`. 
@@ -124,4 +132,4 @@ Once you have your test passing, make sure the `binding.pry` line has been remov
 
 * [Pry documentation](http://pryrepl.org/)
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/debugging-with-pry' title='Debugging with Pry'>Debugging with Pry</a> on Learn.co and start learning to code for free.</p>
+<p class='util--hide'>View <a href='https://learn.co/lessons/debugging-with-pry'>Debugging with Pry</a> on Learn.co and start learning to code for free.</p>
